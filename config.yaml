@@ -1,0 +1,29 @@
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+description: A secure and decentralized communication platform.
+init: false
+map:
+  - "config:rw"
+  - "ssl:rw"
+name: Matrix Synapse Server
+network:
+  - 8008/tcp: Synapse default port
+startup: services
+options:
+  data_dir: /config/addons_config/synapse
+  server_name:
+  report_stats: false
+panel_icon: mdi:matrix
+ports:
+  8008/tcp: 8008
+schema:
+  data_dir: str
+  server_name: str
+  TZ: str?
+  report_stats: bool
+slug: synapse
+version: 0.0.51
