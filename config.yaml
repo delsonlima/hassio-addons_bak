@@ -26,4 +26,4 @@ schema:
   TZ: str?
   report_stats: bool
 slug: synapse
-version: 0.0.51
+version: 0.0.65
