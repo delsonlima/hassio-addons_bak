@@ -1,15 +1,15 @@
+name: Matrix Synapse Server
+version: 0.3.0
+slug: synapse
+description: A secure and decentralized communication platform.
+init: false
 arch:
   - aarch64
   - amd64
-  - armhf
   - armv7
-  - i386
-description: A secure and decentralized communication platform.
-init: false
 map:
   - "config:rw"
   - "ssl:rw"
-name: Matrix Synapse Server
 network:
   - 8008/tcp: Synapse default port
 startup: services
@@ -25,5 +25,4 @@ schema:
   server_name: str
   TZ: str?
   report_stats: bool
-slug: synapse
-version: 0.2.0
+image: ghcr.io/delsonlima/hassio-addons/synapse/{arch}
